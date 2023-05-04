@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": 1,
+    "semi": "error",
+    "quotes": [
+      "warn",
+      "single"
+    ]
+  }
+}
