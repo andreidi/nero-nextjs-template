@@ -10,9 +10,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <Head>
       <meta key='viewport' name='viewport' content='width=device-width, initial-scale=1' />
 
-      <title>nextjs-web-starter-template</title>
+      <title>NERO - One page portfolio website template</title>
 
-      <meta name='description' content='Starter template for websites with Next.js, TypeScript & TailwindCSS.' />
+      <meta name='description' content='NERO - One page portfolio website template by Andrei Diaconu (andreidi.com)' />
       <meta name='author' content='Andrei Diaconu' />
     </Head>
 
