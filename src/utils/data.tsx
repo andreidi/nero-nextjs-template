@@ -1,4 +1,4 @@
-import { FaInstagram, FaFacebook, FaTwitter, FaCodepen, FaGithub, FaStackOverflow, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaTwitter, FaBehance } from 'react-icons/fa';
 
 export const DETAILS = {
   firstName: 'Firstname',
@@ -6,59 +6,28 @@ export const DETAILS = {
   email: 'contact@yourdomain.com'
 };
 
+export const CONTACT_ENDPOINT_URL = 'https://edpeeymw.free.beeceptor.com/contact';
+
 export const SERVICES = [
   {
-    title: 'Front-End Web Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas nunc odio, quis euismod orci porta et. Vestibulum dapibus elementum erat sed laoreet.'
+    title: 'Professional Headshots',
+    description: `Make a lasting impression with a polished and professional headshot. Whether you're an aspiring actor, a corporate executive, or a creative professional, our headshot sessions are designed to capture your unique personality and highlight your best features. Stand out from the crowd with a headshot that commands attention.`
   },
   {
-    title: 'UX/UI',
-    description: 'Duis pellentesque eu purus et rutrum. Nunc fermentum tristique neque, in aliquet mauris vestibulum at. Ut venenatis congue rhoncus. Sed ac erat in mi rutrum cursus non ac ante. Nam nec enim dignissim, pretium tortor.'
+    title: 'Event Photography',
+    description: 'From corporate gatherings to milestone celebrations, our event photography services capture the essence of every occasion. With an eye for detail and a talent for capturing candid moments, we ensure that no important memory goes unnoticed.'
   },
   {
-    title: 'SEO',
-    description: 'Curabitur quis suscipit nulla, non interdum augue. Ut finibus, sapien vel consequat semper, est mauris accumsan leo, non mollis magna neque nec nisl. Curabitur a bibendum lacus.'
-  }
-];
-
-export const FEATURED_PROJECTS = [
-  {
-    title: 'Event Management System',
-    description: 'Web-based event management system that streamlines the event planning and registration process. The system includes features such as event calendars, online registration forms, and automated email communications.',
-    link: '#'
-  },
-  {
-    title: 'Fitness Tracker',
-    description: 'Mobile app that allows users to track their workouts, set goals, and monitor their progress. The app features a clean and user-friendly interface, and is integrated with wearable fitness devices to provide accurate and real-time data.',
-    link: '#'
-  },
-  {
-    title: 'E-commerce Website',
-    description: 'E-commerce website featuring a custom design and a robust back-end system. The website includes features such as product recommendations, user reviews, and a seamless checkout process.',
-    link: '#'
+    title: 'Product Photography',
+    description: 'Showcase your products in their best light with our expert product photography services. Whether you need images for your e-commerce store, advertising campaigns, or catalogs, we have the skills and creativity to bring your products to life.'
   }
 ];
 
 export const SOCIAL = [
   {
-    label: 'LinkedIn',
-    url: 'https://www.linkedin.com/',
-    Icon: FaLinkedin
-  },
-  {
-    label: 'Stack Overflow',
-    url: 'https://stackoverflow.com/',
-    Icon: FaStackOverflow
-  },
-  {
-    label: 'GitHub',
-    url: 'https://github.com/',
-    Icon: FaGithub
-  },
-  {
-    label: 'CodePen',
-    url: 'https://codepen.io/',
-    Icon: FaCodepen
+    label: 'Behance',
+    url: 'https://www.behance.net/',
+    Icon: FaBehance
   },
   {
     label: 'Twitter',
@@ -77,6 +46,79 @@ export const SOCIAL = [
   },
 ];
 
+export const FEATURED_PROJECTS = [
+  {
+    title: 'Project 1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    featuredImage: '/portfolio/1.jpeg',
+    href: '/project'
+  },
+  {
+    title: 'Project 2',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    featuredImage: '/portfolio/2.jpeg',
+    href: '/project'
+  },
+  {
+    title: 'Project 3',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    featuredImage: '/portfolio/3.jpeg',
+    href: '/project'
+  },
+];
+
+export const PROJECTS = [
+  ...FEATURED_PROJECTS,
+  {
+    title: 'Project 4',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    featuredImage: '/portfolio/4.jpeg',
+    href: '/project'
+  },
+  {
+    title: 'Project 5',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    featuredImage: '/portfolio/5.jpeg',
+    href: '/project'
+  },
+  {
+    title: 'Project 6',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    featuredImage: '/portfolio/6.jpeg',
+    href: '/project'
+  },
+  {
+    title: 'Project 7',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    featuredImage: '/portfolio/7.jpeg',
+    href: '/project'
+  },
+  {
+    title: 'Project 8',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    featuredImage: '/portfolio/8.jpeg',
+    href: '/project'
+  },
+  {
+    title: 'Project 9',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    featuredImage: '/portfolio/9.jpeg',
+    href: '/project'
+  },
+];
+
+export const PROJECT = {
+  title: 'Project 1',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  images: [
+    'https://placehold.co/600x400/000000/FFF',
+    'https://placehold.co/400x900/d9d2cc/FFF',
+    'https://placehold.co/600x800/192231/FFF',
+    'https://placehold.co/600x400/c0b283/FFF',
+    'https://placehold.co/800x400/d9b18e/FFF',
+  ]
+};
+
 export const TESTIMONIALS = [
   {
     quote: 'Etiam sed mauris sit amet sem luctus tincidunt. Duis semper, nisi eu elementum dignissim, dolor justo facilisis justo, eget tempor orci est eu dolor. Vivamus in elementum lectus.',
@@ -94,3 +136,4 @@ export const TESTIMONIALS = [
     company: 'Farnsworth Lanes'
   }
 ];
+

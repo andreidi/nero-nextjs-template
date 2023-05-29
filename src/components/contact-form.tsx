@@ -1,15 +1,63 @@
-import Button from './button';
-import Input from './input';
+import { fetchRequest } from '../utils/fetch';
 
+import { CONTACT_ENDPOINT_URL } from '../utils/data';
+import { FormEvent, useState } from 'react';
+
+/**
+ * Contact form component
+ *
+ * This component is an important part of your website where the user can reach out to you by interacting with the form elements and submitting the data.
+ */
 const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+
+    const data = {
+      name,
+      email,
+      message
+    };
+
+    const { response } = await fetchRequest(CONTACT_ENDPOINT_URL, 'POST', data);
+
+    if (response.status === 200) {
+      alert('Thank you for contacting me! I will get back in touch with you soon.');
+    }
+  };
+
+  const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+
+    setName(value);
+  };
+
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+
+    setEmail(value);
+  };
+
+  const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { value } = event.target;
+
+    setMessage(value);
+  };
+
   return (
-    <form className='text-gray-700'>
+    <form className='text-gray-700' onSubmit={handleSubmit}>
       <div>
         <label className='uppercase font-sm font-medium tracking-wider text-gray-500'>Name</label>
 
-        <Input
+        <input
           type='text'
+          value={name}
+          onChange={handleNameChange}
           placeholder='Enter your name'
+          className='mt-2'
           required
         />
       </div>
@@ -17,9 +65,12 @@ const ContactForm = () => {
       <div className='mt-7'>
         <label className='uppercase font-sm font-medium tracking-wider text-gray-500'>Email Address</label>
 
-        <Input
+        <input
           type='email'
+          value={email}
+          onChange={handleEmailChange}
           placeholder='Enter your email address'
+          className='mt-2'
           required
         />
       </div>
@@ -28,7 +79,9 @@ const ContactForm = () => {
         <label className='uppercase font-sm font-medium tracking-wider text-gray-500'>Message</label>
 
         <textarea
-          className='mt-2 block w-full px-2 h-36 transition-all duration-100 ease-in-out resize-y border-gray-300 shadow-sm focus:border-yellow-700 focus:ring focus:ring-yellow-600 focus:ring-opacity-50'
+          value={message}
+          onChange={handleMessageChange}
+          className='mt-2 block w-full px-2 h-36'
           required
         />
 
@@ -36,7 +89,7 @@ const ContactForm = () => {
       </div>
 
       <div className='text-center'>
-        <Button className='mt-8' type='submit'>Send message</Button>
+        <button className='button mt-8' type='submit'>Send message</button>
       </div>
     </form>
   );

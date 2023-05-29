@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export interface ISectionProps {
   id?: string;
@@ -15,26 +15,26 @@ const Section = ({ id, title, titleClassName = '', className = '', bodyClassName
   const inViewStyles = { opacity: 1 };
 
   return (
-    <section className={`mt-20 ${className}`} id={id}>
+    <section className={`mt-10 md:mt-20 ${className}`} id={id}>
       {title && (
-        <motion.h1
+        <m.h1
           initial={initialStyles}
           whileInView={inViewStyles}
           viewport={{ once: true }}
           className={`${titleClassName} uppercase text-4xl tracking-wider mb-8 text-gray-800 font-semibold`}
         >
           {title}
-        </motion.h1>
+        </m.h1>
       )}
 
-      <motion.div
+      <m.div
         initial={initialStyles}
         whileInView={{ ...inViewStyles, transition: { delay: 0.25 } }}
         viewport={{ once: true }}
         className={bodyClassName}
       >
         {children}
-      </motion.div>
+      </m.div>
     </section>
   );
 };

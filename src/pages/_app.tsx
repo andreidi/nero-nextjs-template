@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
+import { LazyMotion, domAnimation } from 'framer-motion';
 
 import '@/styles/globals.css';
 
@@ -16,8 +17,12 @@ export default function App({ Component, pageProps }: AppProps) {
       <meta name='author' content='Andrei Diaconu' />
     </Head>
 
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    {/* Using LazyMotion to reduce bundle size by lazy-loading a subset of Motion's features. */}
+    {/* More info: https://www.framer.com/motion/lazy-motion/ */}
+    <LazyMotion features={domAnimation}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </LazyMotion>
   </>);
 }

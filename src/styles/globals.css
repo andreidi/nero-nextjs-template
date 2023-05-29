@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/*
+ * Using @apply directive from TailwindCSS
+ * to create custom styling for basic elements
+ *
+ * Read more about the directive: https://tailwindcss.com/docs/functions-and-directives#apply
+ */
+
+.button {
+  @apply bg-stone-700 uppercase text-white py-2 px-6 text-lg transition-all duration-300 ease-in-out;
+}
+
+.button:hover {
+  @apply bg-stone-950;
+}
+
+.link {
+  @apply text-yellow-600 font-semibold tracking-wider underline transition-colors duration-300 ease-in-out;
+}
+
+.link:hover {
+  @apply text-yellow-700;
+}
+
+input,
+textarea {
+  @apply block w-full px-2 transition-all duration-100 ease-in-out border-gray-300 !important;
+}
+
+input:focus,
+textarea:focus {
+  @apply border-yellow-700 ring ring-yellow-600 ring-opacity-50 !important;
+}
