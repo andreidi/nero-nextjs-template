@@ -11,9 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <Head>
       <meta key='viewport' name='viewport' content='width=device-width, initial-scale=1' />
 
-      <title>NERO - One page portfolio website template</title>
+      <title>NERO - Portfolio website template</title>
 
-      <meta name='description' content='NERO - One page portfolio website template by Andrei Diaconu (andreidi.com)' />
+      <meta name='description' content='NERO - Portfolio website template by Andrei Diaconu (andreidi.com)' />
       <meta name='author' content='Andrei Diaconu' />
     </Head>
 
