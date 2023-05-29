@@ -1,7 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const PortfolioItem = ({ title, description, featuredImage, href }) => {
+export interface IPortfolioItemProps {
+  title: string;
+  description: string;
+  featuredImage: string;
+  href: string;
+}
+
+const PortfolioItem = ({ title, description, featuredImage, href }: IPortfolioItemProps) => {
   return (
     <Link href={href} className='w-full h-full relative group'>
       <div className='w-full h-full overflow-hidden bg-center bg-cover bg-no-repeat bg-clip-border relative'>
