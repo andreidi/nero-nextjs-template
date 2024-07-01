@@ -1,3 +1,5 @@
+'use client';
+
 import { fetchRequest } from '../utils/fetch';
 
 import { CONTACT_ENDPOINT_URL } from '../utils/data';
